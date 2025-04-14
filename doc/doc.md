@@ -27,7 +27,7 @@ JSONVue
 
 https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 
-git archive --format=zip --output=zibunfin.zip HEAD
+git archive --format=zip --output=section5.zip HEAD
 
 npm install zod@^3
 
@@ -69,3 +69,7 @@ npx shadcn@latest add card
 npm install date-fns@^4
 
 npx shadcn@latest add card
+
+npm install next-auth@beta
+npm install zod@^3
+npx auth secret
