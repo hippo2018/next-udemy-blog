@@ -54,3 +54,18 @@ git push -u origin main
 
 git add .
 git commit -m "prisma setting"
+
+npx shadcn@latest init
+base color > Neutral
+Use --force
+
+npx shadcn@latest init
+base color > Neutral
+Use --force
+
+npx shadcn@latest add navigation-menu button input label alert dropdown-menu alert-dialog
+npx shadcn@latest add card
+
+npm install date-fns@^4
+
+npx shadcn@latest add card
