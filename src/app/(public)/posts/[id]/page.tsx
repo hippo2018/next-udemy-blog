@@ -9,10 +9,10 @@ import {
     CardHeader,
     CardTitle,
   } from "@/components/ui/card"
-// import ReactMarkdown from "react-markdown";
-// import remarkGfm from "remark-gfm";
-// import rehypeHighlight from "rehype-highlight";
-// import "highlight.js/styles/github.css"; // コードハイライト用のスタイル
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github.css"; // コードハイライト用のスタイル
 
 type Params = {
   params: Promise<{id: string}>
@@ -51,10 +51,15 @@ export default async function PostPage({params}: Params) {
           <CardTitle className="text-3xl font-bold">{post.title}</CardTitle>
         </CardHeader>
         <CardContent>
-        <div className="prose max-w-none">
-          {post.content}
-        </div>
-      </CardContent>
+          <div className="prose max-w-none">
+              <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[rehypeHighlight]}
+                    skipHtml={false} // HTMLスキップを無効化
+                    unwrapDisallowed={true} // Markdownの改行を解釈
+              >{post.content}</ReactMarkdown>
+          </div>
+        </CardContent>
       </Card>
     </div>
   )

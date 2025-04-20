@@ -27,7 +27,7 @@ JSONVue
 
 https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadata-fields
 
-git archive --format=zip --output=section5.zip HEAD
+git archive --format=zip --output=section6.zip HEAD
 
 npm install zod@^3
 
@@ -73,3 +73,13 @@ npx shadcn@latest add card
 npm install next-auth@beta
 npm install zod@^3
 npx auth secret
+
+npm install react-markdown@^9
+npm install remark-gfm@^4
+npm install rehype-highlight@^7
+npm install react-textarea-autosize@^8
+npm install @tailwindcss/typography@^0
+
+npx shadcn@^2 add radio-group
+
+git config --global --add safe.directory 'D:/00【Next.js】フルスタック開発基本講座/next-blog'
